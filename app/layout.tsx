@@ -8,8 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 const pixel = localfont({
   src: [
     {
-      path: "../fonts/FreePixel.ttf",
-      // path: "../fonts/dogicapixel.otf",
+      // path: "../fonts/pixelmix.ttf",
+      // path: "../fonts/pixelade.ttf",
+      // path: "../fonts/FreePixel.ttf",
+      path: "../fonts/dogicapixel.otf",
       style: 'normal',
     }
   ],
