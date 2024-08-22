@@ -99,7 +99,7 @@ export default function Typer() {
                         </div>
                     ))}
                 </div>
-                <div className='flex absolute focus-error items-center justify-center align-center w-full z-10 -translate-y-24 text-5xl'> Click here to focus</div>
+                {/* <div className='flex absolute focus-error items-center justify-center align-center w-full z-10 -translate-y-24 text-5xl'> Click here to focus</div> */}
             </div>
             
         </div>
