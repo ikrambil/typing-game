@@ -59,14 +59,14 @@ export default function Typer() {
     }, [lines, currentLineIndex, currentWordIndex, currentLetterIndex, fetchNewLine]);
 
     return (
-        <div className="p-8 w-full text-left" >
+        <div className="p-8 w-full text-left " >
             <h1 className="text-7xl text-yellow-500">Test Type</h1>
             <div className="flex flex-row justify-between text-4xl py-12 pl-5">
                 <div className="timer">30</div>
                 <button onClick={() => startNewGame(getRandomWords, LINELENGTH, setLines, setCorrectness, setCurrentLineIndex, setCurrentWordIndex, setCurrentLetterIndex, setMistake)}>New Game</button>
             </div>
             <div className="game relative outline-none" tabIndex={0} onKeyUp={handleKeyUp}>
-                <div className="words text-4xl pt-12 pl-4 text-gray-700 flex flex-col justify-center items-center">
+                <div className="words text-4xl pt-12 pl-4 text-gray-700 flex flex-col justify-center items-center ">
                     {lines.map((line, lineIndex) => (
                         <div key={lineIndex} className="line">
                             {line.map((word, wordIndex) => (
@@ -99,7 +99,7 @@ export default function Typer() {
                         </div>
                     ))}
                 </div>
-                <div className='flex absolute focus-error items-center justify-center align-center w-full z-10 -translate-y-24 text-5xl'> Click here to focus</div>
+                {/* <div className='flex absolute focus-error items-center justify-center align-center w-full z-10 -translate-y-24 text-5xl'> Click here to focus</div> */}
             </div>
             
         </div>

@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localfont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const pixel = localfont({
+  src: [
+    {
+      // path: "../fonts/pixelmix.ttf",
+      // path: "../fonts/pixelade.ttf",
+      // path: "../fonts/FreePixel.ttf",
+      path: "../fonts/dogicapixel.otf",
+      style: 'normal',
+    }
+  ],
+  variable: '--font-pixel', 
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={pixel.className}>{children}</body>
     </html>
   );
 }

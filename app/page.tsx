@@ -1,9 +1,10 @@
-import Image from "next/image";
-import Typer from "@/components/src/Typer/typer";
+
+import Typer from "@/components/src/Typer/Typer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-gray-600">
+    <main className="flex min-h-screen bg-blue-600">
+      <div>hll</div>
       <Typer/>
     </main>
   );
