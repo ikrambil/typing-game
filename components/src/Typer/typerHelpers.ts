@@ -24,7 +24,20 @@ export const fetchNewLine = (getRandomWords: (num: number) => string[], lines: s
     });
 };
 
-export const startNewGame = (getRandomWords: (num: number) => string[], LINELENGTH: number, setLines: React.Dispatch<React.SetStateAction<string[][]>>, setCorrectness: React.Dispatch<React.SetStateAction<boolean[][][]>>, setCurrentLineIndex: React.Dispatch<React.SetStateAction<number>>, setCurrentWordIndex: React.Dispatch<React.SetStateAction<number>>, setCurrentLetterIndex: React.Dispatch<React.SetStateAction<number>>, setMistake: React.Dispatch<React.SetStateAction<boolean>>) => {
+export const startNewGame = (
+    getRandomWords: (num: number) => string[], 
+    LINELENGTH: number, 
+    setLines: React.Dispatch<React.SetStateAction<string[][]>>, 
+    setCorrectness: React.Dispatch<React.SetStateAction<boolean[][][]>>, 
+    setCurrentLineIndex: React.Dispatch<React.SetStateAction<number>>, 
+    setCurrentWordIndex: React.Dispatch<React.SetStateAction<number>>, 
+    setCurrentLetterIndex: React.Dispatch<React.SetStateAction<number>>, 
+    setMistake: React.Dispatch<React.SetStateAction<boolean>>, 
+    setStartTime: React.Dispatch<React.SetStateAction<number | null>>,
+    setTypedCharacters: React.Dispatch<React.SetStateAction<number>>,
+    setWpm: React.Dispatch<React.SetStateAction<number>>,
+
+) => {
     const initialLines = [getRandomWords(LINELENGTH), getRandomWords(LINELENGTH), getRandomWords(LINELENGTH)];
     setLines(initialLines);
     setCorrectness(initialLines.map(line => line.map(word => Array(word.length).fill(false))));
@@ -32,4 +45,8 @@ export const startNewGame = (getRandomWords: (num: number) => string[], LINELENG
     setCurrentWordIndex(0);
     setCurrentLetterIndex(0);
     setMistake(false);
+    setStartTime(Date.now());
+    //setTimeElapsed(0);
+    setTypedCharacters(0);
+    setWpm(0);
 };
